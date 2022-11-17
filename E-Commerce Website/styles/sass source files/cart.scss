@@ -1,0 +1,97 @@
+@mixin darkButtonHover {
+    color: white;
+    background-color: black;
+}
+
+@mixin textElements {
+    font-size: 20px;
+    font-weight: bold;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.cart-header {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.buttons-div {
+    text-align: center;
+
+    button {
+        border-radius: 28px;
+        padding: 12px;
+        margin: auto 30px;
+        @include textElements();
+        font-weight: normal;
+
+        &:hover {
+            @include darkButtonHover();
+        }
+    }
+}
+
+table {
+    &.cart-table {
+        border-radius: 30px;
+        color: white;
+        background-color: rgb(33, 37, 41);
+        margin: 50px auto;
+        text-align: center;
+        padding-inline: 20px;
+
+        th {
+            font-size: 1.2rem;
+        }
+
+        td {
+            font-size: 17px;
+            &.remove-item{
+                cursor: pointer;
+            }
+        }
+
+        th,
+        td {
+            padding: 12px;
+            width: 200px;
+
+            &:first-child {
+                width: 20px;
+            }
+
+            &.qty-col {
+                width: 30px;
+            }
+            &.remove-item{
+                width: 10px;
+                font-weight: bolder;
+                border-radius: 28px;
+                &:hover{
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+
+        .mycart {
+            background-color: inherit;
+            font-size: 2rem;
+        }
+    }
+} 
+@media (max-width: 630px){
+    .buttons-div{
+        button{
+            margin: auto 20px;
+        }
+    }
+}
+@media (max-width: 570px) {
+    .buttons-div {
+        button {
+            margin: auto 0.1%;
+        }
+    }
+}
