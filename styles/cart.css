@@ -76,6 +76,9 @@ table.cart-table .mycart {
   }
 }
 @media (max-width: 570px) {
+  table.cart-table{
+    width: 100%;
+  }
   .buttons-div button {
     margin: auto 0.1%;
   }
