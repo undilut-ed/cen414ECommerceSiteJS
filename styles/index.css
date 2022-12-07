@@ -37,3 +37,9 @@ h2{
   background-color: white;
   color: #212529;
 }
+
+@media (max-width: 570px) {
+  h2{
+    width: 90%;
+  }
+}
